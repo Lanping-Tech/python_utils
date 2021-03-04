@@ -3,6 +3,7 @@ Python utils for daily use
 
 ## 日常使用 [daily_use](daily_use)
 ### 多线程类模板 [SimpleMultithread.py](daily_use/SimpleMultithread.py)
+### 网页数据爬取 [spider](daily_use/spider)
 ### Pytorch模型训练模板 [pytorch_template](daily_use/pytorch_template)
 
 
