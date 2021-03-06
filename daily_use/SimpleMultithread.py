@@ -16,10 +16,10 @@ class SimpleThread(threading.Thread):
 
     def get_result(self):
         try:
-            return self.result  # 如果子线程不使用join方法，此处可能会报没有self.result的错误
+            return self.result
         except Exception:
             return None
-
+# 测试函数
 def add(a, b):
 	#print ('a+b:', a+b)
 	return a+b
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     threads = []
     loops = 10
     for i in range(loops):
-        t = SimpleThread(add, {'a':i,'b':i})
+        t = SimpleThread(add, {'a':i,'b':i}) # 参数以dict格式输入，keys要与执行函数的形参名字对应
         threads.append(t)
     for i in range(loops):   # start threads 此处并不会执行线程，而是将任务分发到每个线程，同步线程。等同步完成后再开始执行start方法
         threads[i].start()
